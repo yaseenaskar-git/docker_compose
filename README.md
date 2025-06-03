@@ -2,6 +2,16 @@
 
 A full-stack recipe sharing application with React frontend and Node.js backend.
 
+## Your Assignment
+Your task is to containerize this application using Docker and Docker Compose. You'll need to create:
+1. `frontend/Dockerfile` - To containerize the React app
+2. `backend/Dockerfile` - To containerize the Node.js API
+3. `docker-compose.yml` - To orchestrate both services
+
+Once completed, users should be able to run the entire application with a single command: `docker-compose up`.
+
+Good luck! 🚀
+
 ## Local Development Setup
 
 ### Prerequisites
@@ -47,13 +57,3 @@ recipe-app/
 ├── backend/        # Node.js/Express API
 └── README.md       # This file
 ```
-
-## Your Assignment
-Your task is to containerize this application using Docker and Docker Compose. You'll need to create:
-1. `frontend/Dockerfile` - To containerize the React app
-2. `backend/Dockerfile` - To containerize the Node.js API
-3. `docker-compose.yml` - To orchestrate both services
-
-Once completed, users should be able to run the entire application with a single command: `docker-compose up`.
-
-Good luck! 🚀
