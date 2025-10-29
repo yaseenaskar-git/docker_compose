@@ -63,7 +63,7 @@ jobs:
     - name: Build and push Task Tracker backend
       if: success()
       run: |
-        cd Backenddd
+        cd backend
         docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/task-backend:${{ github.sha }} .
         docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/task-backend:${{ github.sha }}
     
@@ -80,8 +80,8 @@ jobs:
       if: success()
       run: |
         gcloud run deploy task-backend \
-          --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/task-backend:${{ github.sha }} \
-          --region ${{ secrets.GCP_REGION }} \
+          --image gcr.io/${{ secrets.GHP_PROJECT_ID }}/task-backend:${{ github.sha }} \
+          --region ${{ secrets.GHP_REGION }} \
           --platform managed \
           --allow-unauthenticated \
           --port 3000 \
