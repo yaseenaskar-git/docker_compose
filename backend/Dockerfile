@@ -13,4 +13,4 @@ RUN mkdir -p /app/data
 
 EXPOSE 5000
 
-CMD ["npm" start"] 
+CMD ["npm" , "start"] 
